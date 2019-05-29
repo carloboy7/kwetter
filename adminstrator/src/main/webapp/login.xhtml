@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+>
+
+<h:head>
+    <h:outputStylesheet name="common-style.css" library="css" />
+</h:head>
+<h:body>
+    <h:form styleClass="loginForm">
+        <h1 class="loginH1">Login</h1>
+        <h:panelGrid columns = "2">
+            <h:outputText value="Username or e-mail:" />
+            <h:inputText  value="#{loginForm.usid}" />
+            <h:outputText value="Password:" />
+            <h:inputSecret value="#{loginForm.pass}" />
+        </h:panelGrid>
+
+        <h:commandButton value="Login" styleClass="loginButton" action="#{loginForm.doLogin}" />
+        <h:messages />
+    </h:form>
+
+</h:body>
+</html>
+
+

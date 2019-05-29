@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+>
+    <body>
+        <ui:composition>
+
+            <b:navBar brandHref="#{request.contextPath}" brandImg='#{request.contextPath}/images/logo.png' fluid="true">
+                <form class="navbar-form navbar-left hidden-md hidden-sm hidden-xs"  action="#{request.contextPath}/secure/kweetSearch.xhtml">
+                    <input name="query" type="text" class="form-control" value="#{searchPage.query}" />
+                </form>
+                <b:navbarLinks pull="right"><b:navLink value="    " href="#"></b:navLink></b:navbarLinks>
+                <b:navbarLinks pull="right" styleClass="hidden-xs">
+                    <b:dropMenu value="User" iconAwesome="user">
+                        <b:navLink value="Profile" href="#"></b:navLink>
+                        <b:navLink value="Sign out" iconAwesome="sign-out" href="#"></b:navLink>
+                    </b:dropMenu>
+                </b:navbarLinks>
+            </b:navBar>
+
+
+        </ui:composition>
+    </body>
+</html>

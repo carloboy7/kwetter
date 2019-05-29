@@ -1,0 +1,23 @@
+<header><div id="textLogo">Kwetter</div></header>
+<div id="cta">
+  <video id="videoPlayer" oncanplay="this.play()" onloadedmetadata="this.muted = true" src="assets/vids/Cheering-Crowd.mp4" preload autoplay muted loop></video>
+  <div id="middle">
+    <div id="colorOverlay">
+
+      <form  action="#">
+        <h1>Kwetter</h1>
+        <p>Share your thoughts, enjoy the moment</p>
+          <h2>Login</h2>
+        <label for="username">Name</label>
+        <input [(ngModel)]="userName" id="username" name="username" type="text">
+
+        <label for="password">Password</label>
+        <input [(ngModel)]="password" id="password" name="password" type="password">
+        <input type="submit" value="Enter" (click)="login()">
+      </form>
+
+      <a [routerLink]="['/register']" >Registreer</a>
+    </div>
+  </div>
+
+</div>

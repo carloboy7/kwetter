@@ -1,0 +1,27 @@
+.kweet{
+  overflow: hidden;
+}
+.kweetOuterContent{
+  display: table;
+  width: calc(100% - 150px);
+  float: left;
+  min-height: 110px;
+}
+.kweetContent{
+  font-size: 30px;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  display: table-cell;
+}
+.kweetUser a{
+  text-decoration: none;
+  color: black;
+}
+.kweetUser{
+  float: right;
+  width: 100px;
+  margin-left: 50px;
+}
+.kweetUser a{
+  font-size: 20px;
+}

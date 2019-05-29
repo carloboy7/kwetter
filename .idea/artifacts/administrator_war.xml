@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="administrator:war">
+    <output-path>$PROJECT_DIR$/adminstrator/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>administrator</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Kwetter.war">
+      <element id="artifact" artifact-name="administrator:war exploded" />
+    </root>
+  </artifact>
+</component>

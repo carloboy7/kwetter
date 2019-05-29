@@ -1,0 +1,30 @@
+<header><div id="textLogo">Kwetter</div></header>
+<div id="cta">
+  <video id="videoPlayer" oncanplay="this.play()" onloadedmetadata="this.muted = true" src="assets/vids/Cheering-Crowd.mp4" preload autoplay muted loop></video>
+  <div id="middle">
+    <div id="colorOverlay">
+
+      <form  action="#">
+        <h1>Kwetter</h1>
+        <p>Share your thoughts, enjoy the moment</p>
+        <h2>Register</h2>
+        <label for="username">Name</label>
+        <input [(ngModel)]="userName" id="username" name="username" type="text">
+
+        <label for="username">Email</label>
+        <input [(ngModel)]="email" id="email" name="username" type="text">
+
+        <label for="password">Password</label>
+        <input [(ngModel)]="password" id="password" name="password" type="password">
+
+        <label>Profile Picture</label>
+        <div id="profilePictures">
+          <img *ngFor="let src of images; let i = index" [attr.data-index]="i" [src]="src" width="100" (click)="selectedImage = i" [ngClass]="{imageSelect : i == selectedImage, imageItem : true}">
+        </div>
+
+        <input type="submit" value="Enter" (click)="register()">
+      </form>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,6 @@
+<header><a href="/" id="textLogo">Kwetter</a> <div id="search"><div id="inputGroup"> <input type="text" [(ngModel)]="search" name="search" (keydown)="makeSearch($event)" placeholder="Search" id="input"> <input type="submit" id="submitButton" value="Submit"></div> </div> <div id="logout" (click)="logout()">Log uit </div> </header>
+<main>
+<div id="mainScroll">
+  <ng-content></ng-content>
+</div>
+</main>

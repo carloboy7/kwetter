@@ -1,0 +1,32 @@
+<app-default>
+  <div id="container">
+    <div id="kweetContainer">
+      <app-entry *ngIf="showInput">
+        <h1>What's up</h1>
+        <textarea placeholder="Feeling lucky" [(ngModel)]="kweetText"></textarea>
+        <input type="submit" value="Post" name="kweetText" (click)="sendNewKweet()">
+      </app-entry>
+      <app-entry *ngFor="let kweet of feed">
+        <app-kweet [kweet]="kweet"></app-kweet>
+      </app-entry>
+    </div>
+    <div id="personalInfo">
+      <div id="followButton" (click)="followButtonClicked()" *ngIf="followState > 0" [ngClass]="{unfollow : followState === 3}">{{followState ===3 ? "Unfollow" : "Follow" }}</div>
+
+      <app-entry>
+        <img [src]="user.profileImage.url || 'https://via.placeholder.com/230'" width="230" /> <br />
+        <b>{{user.name || ""}}</b>
+      </app-entry>
+
+      <app-entry>
+        <b>Following</b> <br />
+        <img *ngFor="let x of following" [src]="x.profileImage.url || 'https://via.placeholder.com/30'" [title]="x.name" [alt]="x.name" width="30" />
+      </app-entry>
+
+      <app-entry>
+        <b>Followers</b> <br />
+        <img *ngFor="let x of followers" [src]="x.profileImage.url || 'https://via.placeholder.com/30'" [title]="x.name" [alt]="x.name" width="30" />
+      </app-entry>
+    </div>
+  </div>
+</app-default>

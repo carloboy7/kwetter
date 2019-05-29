@@ -1,0 +1,5 @@
+<div class="kweet">
+  <div class="kweetOuterContent">
+    <div class="kweetContent"> {{kweet.text}} </div>
+  </div>
+<div class="kweetUser"><img [src]="kweet.user.profileImage.url || 'https://via.placeholder.com/100'"  width="100" /> <br/><a [routerLink]="['/user', kweet.user.id]" >{{kweet.user.name}}</a></div> </div>

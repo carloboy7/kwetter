@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="authentication:war">
+    <output-path>$PROJECT_DIR$/authentication/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>authentication</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Kwetter.war">
+      <element id="artifact" artifact-name="authentication:war exploded" />
+    </root>
+  </artifact>
+</component>

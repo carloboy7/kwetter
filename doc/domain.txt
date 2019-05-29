@@ -1,0 +1,25 @@
+@startuml
+
+User  ---> "1..*" Role : has >
+User  ---> "0..*" Kweet : has written >
+User "0..*" --- "0..*" User : follows >
+
+User : -User[] following
+User : -User[] follows
+User : -Kweet[] kweets
+User : -Role[] roles
+
+Kweet : -String text
+Kweet : -User user
+
+Role : -String name
+
+
+Repository --> Context : stores and retrieves data from >
+Context  <|-- MemoryContext
+Context  <|-- DatabaseContext
+
+Service --> Repository : uses >
+
+
+@enduml

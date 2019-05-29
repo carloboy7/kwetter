@@ -1,0 +1,10 @@
+<app-default>
+  <div id="container">
+    <div id="users">
+      <div class="singleUser" *ngFor="let x of users"><div class="userContainer"> <img [src]="x && x.profileImage? x.profileImage.url || 'https://via.placeholder.com/30' : 'https://via.placeholder.com/30'" width="30" /> <a [routerLink]="['/user', x.id]">{{x.name}}</a></div></div>
+    </div>
+    <app-entry *ngFor="let kweet of kweets">
+      <app-kweet [kweet]="kweet"></app-kweet>
+    </app-entry>
+  </div>
+</app-default>

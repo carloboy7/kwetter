@@ -1,0 +1,52 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="backend-war:war exploded">
+    <output-path>$PROJECT_DIR$/backend/target/Kwetter</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>backend-war</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="backend-war" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:5.2.4.Final" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.2.1.Final" />
+          <element id="library" level="project" name="Maven: com.fasterxml:classmate:1.1.0" />
+          <element id="library" level="project" name="Maven: org.glassfish:javax.el:3.0.0" />
+          <element id="archive" name="shared-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="shared" />
+          </element>
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.2" />
+          <element id="archive" name="framework-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="framework" />
+          </element>
+          <element id="library" level="project" name="Maven: org.apache.activemq:activemq-all:5.15.8" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.2.10.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:1.0.1.Final" />
+          <element id="library" level="project" name="Maven: org.jboss:jandex:2.0.3.Final" />
+          <element id="library" level="project" name="Maven: dom4j:dom4j:1.6.1" />
+          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.0.1.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-entitymanager:5.2.10.Final" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.12" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.12" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.36" />
+          <element id="library" level="project" name="Maven: org.hibernate.validator:hibernate-validator-cdi:6.0.15.Final" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/backend/target/Kwetter/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="backend-war/web/Web" />
+    </root>
+  </artifact>
+</component>

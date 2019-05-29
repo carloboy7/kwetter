@@ -1,0 +1,67 @@
+#content{
+    margin: 10px;
+}
+.searchContainer{
+    background-color: #fffbf7;
+    border: 1px black solid;
+    border-radius: 1px;
+    width: 500px;
+}
+.searchContainer .searchHeader{
+    background-color: antiquewhite;
+    height: 30px;
+    padding: 5px;
+}
+.searchContainer .searchHeader ul{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.searchContainer .searchHeader li{
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+.searchContainer .searchUsername{
+    font-weight: bolder;
+}
+.searchContainer .searchCreatedAt{
+    float:right;
+}
+.searchContainer .searchBody{
+    padding: 10px 5px;
+}
+.searchContainer .searchFooter{
+    overflow: hidden;
+    padding: 5px;
+}
+.searchContainer .searchDeleteButton{
+    float: right;
+}
+.searchContainer .searchBody ul{
+    margin: 0;
+    padding-left: 17px;
+}
+.loginForm{
+    width: 336px;
+    margin: 30px auto;
+    background-color: #e6e6e6;
+    padding: 20px;
+    border-radius: 3px;
+}
+.loginButton{
+    background-color: #4183D7;
+    border-style: none;
+    box-shadow: #38549D 0 5px 0 0;
+    color: #FFFFFF;
+    outline-style: none;
+    padding: 5px 16px;
+    border-radius: 0;
+    margin-top: 14px;
+}
+.loginH1{
+    margin: 0 0 12px;
+    font-weight: normal;
+}

@@ -1,0 +1,24 @@
+#container{
+    width: 800px;
+    margin: 70px auto;
+    overflow: hidden;
+}
+.singleUser{
+    border-radius: 2px;
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.45);
+    background-color: rgba(255,255,255,1);
+    display: inline-block;
+    padding: 3px 6px 0 3px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.userContainer{
+    display: table;
+}
+.singleUser a{
+    color: black;
+    text-decoration: none;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 6px;
+}

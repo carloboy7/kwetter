@@ -1,0 +1,25 @@
+@startuml
+
+Service       --> HttpCommunicator : Makes a http request with >
+AuthorizedHttpCommunicator --> AuthProvider :  Need authentication from >
+AuthProvider  --> AuthenticationHeader : Provides the data with >
+BasicAuthProtocolProvider  --> UnauthorizedHttpCommunicator : Uses for initial communication >
+
+
+AuthenticationHeader : -String complete
+AuthenticationHeader : -String protocol
+AuthenticationHeader : -String body
+
+class HttpCommunicator <<interface>>
+HttpCommunicator : postRequest(Request)
+HttpCommunicator : getRequest(Request)
+
+class AuthProvider <<interface>>
+AuthProvider : getAuthenticationHeader() : AuthenticationHeader
+
+HttpCommunicator <|-.- AuthorizedHttpCommunicator
+HttpCommunicator <|-.- UnauthorizedHttpCommunicator
+AuthProvider     <|-.- BasicAuthProtocolProvider
+
+
+@enduml

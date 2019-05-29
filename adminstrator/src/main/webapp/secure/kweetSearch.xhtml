@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:search="http://java.sun.com/jsf/composite/search"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+>
+<f:metadata>
+    <f:viewParam id="query" name="query" value="#{searchPage.query}" />
+    <f:viewAction action="#{searchPage.search}" />
+</f:metadata>
+
+<h:body>
+    <ui:composition template="../resources/layout/common.xhtml">
+        <ui:define name="content">
+
+            <h1>Kweets</h1> <br />
+            There are <b>#{searchPage.kweets.size()}</b> kweets found:
+            <ui:repeat value="#{searchPage.kweets}" var="value">
+                <search:kweetContainer kweetId="#{value.id}" text="#{value.text}" name="#{value.user.name}"/> <br/>
+            </ui:repeat>
+
+            <h1>Users</h1> <br />
+            There are <b>#{searchPage.users.size()}</b> user found:
+            <ui:repeat value="#{searchPage.users}" var="user">
+                <search:userContainer name="#{user.name}" bio="#{user.bio}" date="" /> <br/>
+             </ui:repeat>
+
+
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>
